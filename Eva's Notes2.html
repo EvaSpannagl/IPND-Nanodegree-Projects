@@ -1,0 +1,228 @@
+
+<!DOCTYPE HTML>
+<html lang=en>
+  <!-- This is a project handed in for the Udacity Intro to Programming Nanodegree Program-->
+
+<head>
+  <title>Eva's notes - Intro to Programming Nanodegree</title>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <p style="text-align:center;"><img src="imageudacity.png" alt="Udacity Logo" height="40" width="200"></p>
+
+<h1>Nanodegree - Intro to Programming </h1>
+
+
+        <p style="text-align:center;"><img src="imageoverview.png" alt="Overview" height="170" width="900"></p>
+<br>
+<br>
+
+        <p style="text-align:center;">
+    <span class="badge">Let's code!</span>
+        </p>
+
+  <h2>I. Getting started with HTML</h2>
+
+
+    <h3><span><b>The World Wide Web</b></span></h3>
+      <div class="contentblock">
+        <p>The web needs three components:</p>
+  <ol>
+    <li> <em>client</em> (computer or browser),</li>
+    <li> <em>Internet</em> and</li>
+    <li> <em>servers</em>.</li>
+  </ol>
+        <p> A client opens his web browser and types in for example www.facebook.com.
+      The browser sends this http <em>(Hypertext Transfer Protocol)</em> request
+      to a server which sends back the correct HTML document. The browser can interpret
+      the HTML document and display the information.
+        </p>
+      </div>
+
+    <h3><span><b>HTML</b></span></h3>
+      <div class="flexdisplay">
+      <div class="htmlimage"><img src="imagehtml.png" alt="HTML" height="80" width="190"></div>
+      <div class="contentblock">
+      HTML <em>(HyperText Markup Language)</em> is a language the browser uses
+      to <em>interpret web pages</em> and the basic building block of the Web.
+      It defines and depicts a webpage's content. Two other important technologies
+      next to HTML are <em>CSS (Webpage's appearance/presentation)</em> and
+      <em>JavaScript(functionality/behavior)</em>.
+      </div>
+      </div>
+
+    <h3><span><b>HTML elements and attributes</b></span></h3>
+      <div class="contentblock">
+        <p>A web browser displays the <b>HTML elements</b> we give him. Most tags contain
+        an opening <em>tag</em>, some content and a closing tag. There are also tags,
+      which don't have a closing tag e.g. "br" (break).
+        </p>
+
+        <p>There are elements which can contain additional values named <b>attributes</b>
+      in their opening tags. These attributes give additional information to the browser.
+      The image tag for example uses the attribute "src", the value "url" (path or local
+      computer file). If the image can't be shown, the "alt" attribute value "text" is shown.
+        </p>
+      </div>
+    <h3><span><b>Useful HTML Tags</b></span></h3>
+
+      <div class="flexdisplay">
+      <div class="contentblock">
+        <p>There are thousands of tags, that can be used for writing in HTML.
+        A long list on HTML tags can be found  <a href="https://www.w3schools.com/tags/">here.</a>
+        </p>
+      </div>
+      <div class="htmlimage"><img src="imagetaglist.png" alt="Taglist" height="210" width="350"></div>
+      </div>
+
+    <h3><span><b>Why do we say, that computers are stupid?</b></span></h3>
+      <div class="contentblock">
+        <p>Computers can only display what they read, <span>but they're not able to do</span> abstract
+       thinking. Therefore it's important to write correct codes to avoid problems in a program.
+        </p>
+      </div>
+
+    <h3><span><b>Inline and Box elements</b></span></h3>
+      <div class="contentblock">
+        <p><b> Inline</b> elements describe tags, that will be interpreted by the browser as one line.
+       In contrary, <b>box</b> elements build an "invisible" box around the content, whereby a line break
+       will be created.
+        </p>
+      </div>
+
+    <h3><span><b>Document structure</b></span></h3>
+      <div class="contentblock">
+       Following a document structure is important for other developers to read quickly your
+       written code and having a structure for yourself. The document should start with an <em>DOCTYPE HTML</em> tag,
+       to describe the type of document you're using. Afterwards an <em>html</em> tag surrounds the
+       whole document. It can be followed by a <em>head</em> tag including meta data, also important
+       when working with JavaScript. The style CSS-concepts can also be included in the head section.
+       It is followed by a <em>title</em>, shown on the top of the document and a <em>body</em> section,
+       containing the content of the website. Within the body section we can use p-Tags, h1-Tags etc.
+       to fill in the content. However, it's important to use indentation, the indentation level
+       should increase when an idea starts and decrease when an idea is finished.
+      </div>
+       <p style="text-align:center;"><img src="documentstructure.png" alt="Document structure" height="350" width="550"></p>
+
+    <br>
+    <br>
+
+    <h3><span><b>Useful links to learn more</b></span></h3>
+      <div class="contentblock">
+        <p><i class="fa fa-laptop"></i> <a href="https://www.w3schools.com/">W3schools: Tutorials on HTML, CSS and Java</a>
+        </p>
+        <p><i class="fa fa-laptop"></i><a href="https://developer.mozilla.org/en-US/">MDN web docs: Developer tools, Web technologies etc.</a>
+        </p>
+        <p><i class="fa fa-laptop"></i><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML Introduction </a>
+        </p>
+        <p><i class="fa fa-laptop"></i><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"> Heading Element</a>
+        </p>
+        </div>
+        <p>Please feel free to add your most useful links to learn more about HTML in this box:</p>
+        <p style="text-align:center;"><textarea class='input-textarea' placeholder='Text Area'></textarea></p>
+
+
+    <br>
+    <br>
+    <br>
+        <p style="text-align:center;"><img src="Lesson2.png" alt="Overview" height="170" width="900"></p>
+    <br>
+
+  <h2>II. Adding CSS for Style</h2>
+
+    <h3><span><b>Understanding CSS </b></span></h3>
+
+      <div class="contentblock">
+        <p><b>CSS</b> means <em>"most specific rule applied"</em> and describes how the element will be displayed. In CSS you
+        first write a selector e.g. p (Paragraph), class (attributes) etc. and then define what style. To understand the concept better
+        feel free to have a look at  <a href="https://css-tricks.com/how-css-selectors-work/"> the following website</a>. Moreover,
+        you can use spans, divs, ids etc. to add more style to your webpage. This is explained in <a href="https://www.youtube.com/watch?v=mpyJ28dkzrU">the following video</a>.
+      </div>
+      <div class="video"><p style="text-align:center;"><iframe width="610" height="410" src="https://www.youtube.com/embed/mpyJ28dkzrU?"></iframe></p>
+      </div>
+
+    <h3><span><b>Understanding the importance of style</b></span></h3>
+
+      <div class="contentblock">
+        <p>To understand the importance of CSS style, have a look at the <a href="https://www.youtube.com/watch?v=sLo3N7YjZbU">following video</a>.
+        </p>
+      </div>
+
+      <div class="video">
+        <p style="text-align:center;"><iframe width="610" height="410" src="https://www.youtube.com/embed/sLo3N7YjZbU"></iframe></p>
+      </div>
+
+    <h3><span><b>Understanding the box model</b></span></h3>
+      <div class="contentblock">
+        <p>As described before is <b>everything on a webpage divided into boxes</b>. As you can see on
+        <a href="http://assignments.udacity-extras.appspot.com/courses/html-css/samples/box-model.html">
+        this webpage assignment</a> the box model is describes in four parts. The <em>content</em> in the middle contains
+        the main text, images etc. Around it we can find the <em>paddle</em> which can be described as the background behind the text. The <em>border</em>
+        is defined as the corder around the whole text. The <em>margin</em> sets the space around the textarea.
+        </p>
+
+        <p>The <em>size</em> of boxes, texts etc. can be set in <em>pixels or in percentages</em>. Percentages help to make the box shrink or grow
+        depending on the size of the screen and therefore create a better user experience. It can also be set a <em>max width</em> to make sure it
+        only grows only up to a certain size. Moreover, the box-sizing attribute added to the border-box helps to deal with sizing problems.
+        </p>
+      </div>
+
+
+    <h3><span><b>Dive deeper into box positioning</b></span></h3>
+      <div class="contentblock">
+        <p> Divs are by nature <em>block elements</em> and therefore <em>take up the entire width of a page</em>. By adding the rule display:flex to the suited
+        CSS, the behaviour will be overwritten and both elements appear next to each other.
+        </p>
+      </div>
+
+    <h3><span><b>Semantic tags</b></span></h3>
+      <div class="flexdisplay">
+      <div class="contentblock">
+        <p>Another option to add style to a webpage is using <b>semantic tags</b> <em>as e.g. h1, h2, title etc.</em> which also use styles. For more
+        information please have a look <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning">here</a>.
+        </p>
+      </div>
+      <div class="htmlimage"><img src="imagesemantictag.png" alt="Semantictag" height="210" width="350"></div>
+      </div>
+
+
+    <h3><span><b>Why does style matter a lot?</b></span></h3>
+      <div class="contentblock"> It matters a lot where the rules are defined and in what order they are applied. The following list describes the <em>order in which
+      rules are applied</em>:
+      <ol>
+        <li> Default browser style</li>
+        <li> Stylesheet in a separate file </li>
+        <li> Inside HTML stylesheet (should only be used for small projects)</li>
+        <li> Inline style in an element (should be avoided, as mistakes can occure easily)</li>
+    </ol>
+      </div>
+    <h3><span><b> How to create a nicely designed webpage?</b></span></h3>
+      <div class="contentblock">
+        <div><label class='input-label'><input class='input-toggle' type='checkbox' checked> Look for natural boxes</label></div>
+        <div><label class='input-label'><input class='input-toggle' type='checkbox' checked> Look if there are any repeated styles and semantic elements</label></div>
+        <div><label class='input-label'><input class='input-toggle' type='checkbox' checked> Write your own HTML down</label></div>
+        <div><label class='input-label'><input class='input-toggle' type='checkbox' checked> Apply styles with CSS</label></div>
+        <div><label class='input-label'><input class='input-toggle' type='checkbox' checked> Fix mistakes</label></div>
+      </div>
+    <h3><span><b> How to check your HTML to make sure it'll look nice in different browsers?</b></span></h3>
+      <div class="contentblock">
+        <p> <a href="http://validator.w3.org/#validate_by_input">This website</a> offers a free service to check the final HTML.
+        </p>
+        <p> <a href="http://jigsaw.w3.org/css-validator/#validate_by_input">This website</a> offers a free service to check the final CSS.
+        </p>
+      </div>
+    For further information on website creation please have a look at the following <a href="https://www.youtube.com/watch?v=2eZBzTKPuWA">video.</a>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+        <p style="text-align:center;">
+          <span class="badge">Made with <i class="fa fa-heart"></i> </span>
+        </p>
+  </body>
+</html>
