@@ -1,7 +1,7 @@
 # This is a quiz handed in for the Intro in Programming Nanodegree at Udacity by Eva in May 2018.
 # It should show the newly acquired python skills of the programmer in-charge-of.
 # To play the game on a Mac please save the file on your Desktop as QuizEva.py, open your Terminal, command to Desktop
-# and python QuizEva.py.
+# and python QuizEva_v02.py.
 # Start gaming and have fun!
 
 # A list of replacement blanks to be filled in into the play game function.
@@ -26,20 +26,22 @@ print "Hello and welcome to Eva's quiz!"
 def choose_level():
     """ raw input defines level and output is the particular string & solution
   based on the chosen level"""
-    level = raw_input("Please choose a difficulty level. You can type in easy, middle or hard.\n\n")
-    print "You choose: " + level
-    if level == "easy":
-        quiz_string = easy_quiz_string
-        answers_quiz_string = answers_easy_quiz_string
-    elif level == "middle":
-        quiz_string = middle_quiz_string
-        answers_quiz_string = answers_middle_quiz_string
-    elif level == "hard":
-        quiz_string = hard_quiz_string
-        answers_quiz_string = answers_hard_quiz_string
-    else:
-        print "Please start all over again and choose a level easy, middle and hard."
-    print  "\n You will get 5 tries to answer each question.\n"+ quiz_string
+    quiz_string = "0"
+    while quiz_string == "0":
+        level = raw_input("Please choose a difficulty level. You can type in easy, middle or hard.\n\n")
+        print "You choose: " + level
+        if level == "easy":
+            quiz_string = easy_quiz_string
+            answers_quiz_string = answers_easy_quiz_string
+        elif level == "middle":
+            quiz_string = middle_quiz_string
+            answers_quiz_string = answers_middle_quiz_string
+        elif level == "hard":
+            quiz_string = hard_quiz_string
+            answers_quiz_string = answers_hard_quiz_string
+        else:
+            print "Please start all over again and choose a level easy, middle and hard."
+    print  "\n You will get 5 tries to answer each question.\n" + quiz_string
     return quiz_string, answers_quiz_string
 
 
@@ -53,13 +55,13 @@ def word_in_blanks(word, blanks):
     return None
 
 # This function checks if there is a blank element and replaces it.
-def replace_blank(quiz_string, user_input):
+def replace_blank(quiz_string, user_input, count_blanks):
     """ replaces blank elements with the user_input """
     replaced = []
     quiz_string = quiz_string.split()
     for word in quiz_string:
         replacement = word_in_blanks(word, blanks)
-        if replacement != None:
+        if replacement != None and replacement == blanks[count_blanks]:
             word = word.replace(replacement, user_input)
             replaced.append(word)
         else:
@@ -74,17 +76,17 @@ def play_game(quiz_string, answers_quiz_string):
     max_tries = 4
     count_blanks = 0
     max_blanks = len(answers_quiz_string)
-    while count_answers < max_tries and count_blanks < max_blanks:
+    while count_answers <= max_tries and count_blanks < max_blanks:
         user_input = raw_input("\n" "What should be filled in for " + blanks[count_blanks] + "?")
         for word in quiz_string:
             if user_input == answers_quiz_string[count_blanks]:
                 print "Congratulations, that's correct!"
-                correct_answer = replace_blank(quiz_string,user_input)
+                correct_answer = replace_blank(quiz_string,user_input, count_blanks)
                 count_blanks += 1
                 count_answers += 1
                 break
             else:
-                print "Not quite. Try again. You have" + str[max_tries - count_answers] + "tries left. Good luck!"
+                print "Not quite. Try again. You have " + str(max_tries - count_answers) + "  tries left. Good luck!"
                 count_answers += 1
                 break
         else: print "Sorry. Game over!"
